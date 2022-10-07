@@ -1,0 +1,21 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="search">
+    <app-search
+      [searchTerm]="searchTerm"
+      (search)="searchGifs($event)"
+    ></app-search>
+  </div>
+
+  <div class="gif-list">
+    <app-gifs-list [gifs]="(gifsSearchResult$ | async)?.data"></app-gifs-list>
+  </div>
+
+  <div class="paginator">
+    <mat-paginator [length]="(gifsSearchResult$ | async)?.pagination?.total_count"
+                   [pageSize]="pageSize"
+                   aria-label="Select page"
+                   (page)="handlePage($event)">
+    </mat-paginator>
+  </div>
+</div>

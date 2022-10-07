@@ -1,0 +1,5 @@
+<mat-form-field appearance="fill" class="full-width">
+  <mat-label>Search GIFs by name</mat-label>
+  <input (keyup.enter)="onSearch(searchTerm)" matInput [(ngModel)]="searchTerm"/>
+  <mat-icon matSuffix (click)="onSearch(searchTerm)">search</mat-icon>
+</mat-form-field>

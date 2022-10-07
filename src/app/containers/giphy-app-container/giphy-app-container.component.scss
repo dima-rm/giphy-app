@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.search {
+  text-align: center;
+  padding-top: 50px;
+
+  .full-width {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+.gif-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
